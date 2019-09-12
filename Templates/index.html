@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Home Page </title>
+  </head>
+  <body>
+    {% load static %}
+      <div class="">
+        <!-- { code } language used in Django -->
+        {% for post in object_list %}
+          <img src="/{{post.image}}" width=200 height=200>
+        {% endfor %}
+      </div>
+  </body>
+</html>
+
+
+<!-- "/{{ post.image }}" in which the '/' before {} is important: it will
+direct append the path right after host path instead of the current path:
+
+Eg1:
+
+"/{{ post.image }}" -> http://127.0.0.1:8000/static/images/posts/13-nw.jpg
+"{{ post.image }}" -> http://127.0.0.1:8000/Insta/posts/static/images/posts/13-nw.jpg -->

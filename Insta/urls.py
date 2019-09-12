@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from Insta.views import HelloDjango
+from Insta.views import HelloDjango, PostListView, PostDetailView
 
 urlpatterns = [
     url(r'^$', HelloDjango.as_view(), name='helloworld'),
+    url(r'^posts', PostListView.as_view(), name='posts'),
+    url(r'^post/(?P<pk>\d+)', PostDetailView.as_view(), name='post_detail'),
 ]

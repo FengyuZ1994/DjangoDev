@@ -12,3 +12,5 @@ class Post(models.Model):
         options = {'quality':100},
         blank = True
     )
+    def __str__(self):
+        return self.title
