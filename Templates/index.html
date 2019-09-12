@@ -8,6 +8,10 @@
   <body>
     {% load static %}
       <div class="">
+        <a href="{% url 'make_post' %}"> Make Post </a>
+      </div>
+
+      <div class="">
         <!-- { code } language used in Django -->
         {% for post in object_list %}
           <img src="/{{post.image}}" width=200 height=200>

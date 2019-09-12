@@ -5,7 +5,13 @@
     <title></title>
   </head>
   <body>
-    {% load static %}
+    <div class="">
+      <a href="{% url 'update_post' object.id %}"> Update This Post </a>
+    </div>
+    <div class="">
+      <a href="{% url 'delete_post' object.id %}"> Delete This Post </a>
+    </div>
+
     <p> {{object.title}} </p>
     <img src="/{{object.image}}">
   </body>
